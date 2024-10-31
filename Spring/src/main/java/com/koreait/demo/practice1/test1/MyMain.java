@@ -36,7 +36,7 @@ public class MyMain {
         Person james = context.getBean("jamesName", Person.class);
         // 이 부분에서 제임스가 태어났다! 가 출력됨
         // MyMain.java에 제임스 부분에 @Bean(name = "jamesName", initMethod = "born")가 있기 때문
-        
+
         System.out.println("===================");
         james.setAge(4544);
         System.out.println("james=========> "+james);

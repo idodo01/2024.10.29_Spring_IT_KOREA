@@ -8,7 +8,7 @@ public class MyObject {
         if(instance == null){
             instance = new MyObject();
         }
-        return instance;
+        return instance; // 기존 객체가 있었으면, 기존 것이 동일하게 들어감
     }
 
     private MyObject(){}

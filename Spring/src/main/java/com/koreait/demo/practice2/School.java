@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
-@Component
+@Component // Spring이 관리할 객체(빈)이라는 것을 표시
 public class School {
     @Autowired
     private Person person;

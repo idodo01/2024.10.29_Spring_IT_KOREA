@@ -6,11 +6,14 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class MyMain {
     public static void main(String[] args) {
         ApplicationContext context = new AnnotationConfigApplicationContext(MyConfig.class);
+
+        // 1. Person
         Person person = context.getBean(Person.class);
         person.setName("김나나");
 
-        School school = context.getBean(School.class);
-        System.out.println(school);
+        // 2. School
+        School school = context.getBean(School.class); // School 클래스내에 Person 객체 변수 있음
+        System.out.println("school=======>"+school);
 
         /**************************************************************************/
 //        try {
@@ -34,6 +37,8 @@ public class MyMain {
 //        }
         /*******************************************************/
 //        System.out.println(MyObject.instance);
+
+        // 3. myObject
         MyObject myObject = MyObject.getInstance();
         System.out.println(myObject);
 
