@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+<!--    src > main > java > com > koreait > demo > practice4 > MyController
+        localhost:8080/get 입력했을 때, 500에러 뜨던 것이 해결됨
+
+        1. 아래 bean 추가
+        2. webapp > WEB-INF > views > get.jsp 추가
+
+        => localhost:8080/get 입력하면
+        webapp > WEB-INF > views > get.jsp 해당 페이지가 출력됨-->
+
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/views/" />
+        <property name="suffix" value=".jsp" />
+    </bean>
+
+    <context:component-scan base-package="com.koreait.demo.practice4" />
+</beans>
