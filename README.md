@@ -1,2 +1,2 @@
 # 2024.10.29_Spring_IT_KOREA
-(IT 코리아) Spring 1번째
+(IT 코리아) Spring
