@@ -5,6 +5,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 // test1.Mymain: MyConfig에서, bean를 지정해서 사용하는 방법
 // test2.Mymain2: resources > application-context에서, bean를 지정해서 사용하는 방법
+// practice2: 객체 빈이 될 클래스에 @Component 사용해서 바로 빈 등록하는 방법
 public class MyMain2 {
     public static void main(String[] args) {
 

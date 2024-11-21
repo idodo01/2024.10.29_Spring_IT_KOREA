@@ -1,4 +1,4 @@
-package com.koreait.demo.practice3;
+package com.koreait.demo.practice3.test2;
 
 import org.springframework.stereotype.Component;
 

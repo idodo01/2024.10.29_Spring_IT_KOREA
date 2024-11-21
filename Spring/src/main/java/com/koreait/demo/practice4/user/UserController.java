@@ -14,11 +14,13 @@ public class UserController {
     @GetMapping("/login")
     public String get_login(HttpSession session) {
         Object user = session.getAttribute("user");
+
         // 로그인하고 왔다 == setAttribute해서 어떤 값이 있다
         if(user != null) {
             return "redirect:/user/success";
         }
-        return "test1105/login";
+
+        return "test1105/login";  // webapp > WEB-INF > views > test1105 > login.jsp가 보여짐
     }
 
     @PostMapping("/login")
@@ -33,6 +35,7 @@ public class UserController {
             session.setAttribute("user", user);
             return "redirect:/user/success";
         }
+
         // 로그인에 실패했다면
         return "redirect:/user/login";
     }
@@ -54,12 +57,14 @@ public class UserController {
 
     @GetMapping("/success")
     public String get_success(HttpSession session) {
+
         Object user = session.getAttribute("user");
         // 로그인 안하고 왔따 ==> session에 setAttribute한 적 없다
         if(user == null) {
             // 로그인 창으로 GET요청보내기
             return "redirect:/user/login";
         }
+
         return "test1105/success";
     }
 

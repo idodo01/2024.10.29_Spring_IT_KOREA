@@ -8,7 +8,7 @@ public class MyMain {
         ApplicationContext context = new AnnotationConfigApplicationContext(MyConfig.class);
 //        Animal animal = context.getBean(Animal.class);
         Zoo zoo = context.getBean(Zoo.class);
-//        zoo.setAnimal(null);
+//        zoo.setAnimal();
         System.out.println(zoo);
     }
 }

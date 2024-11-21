@@ -10,3 +10,4 @@ import org.springframework.context.annotation.Configuration;
 @Configuration // @Configuration과, MyMain.java의 ApplicationContext은 연결된 개념
 public class MyConfig {
 }
+
